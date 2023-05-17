@@ -1,0 +1,12 @@
+get binary_string from input
+
+decodings = new list [1]
+
+for 1 to len(binary_string) + 1
+    insert (decodings[i - 1]) into decodings
+
+    if i > 1 and binary_string[i - 2 : i - 1] in double_bit_encodings:
+        decodings[i] += decodings[i - 2]
+
+    if i > 2 and binary_string[i - 3 : i - 1] in triple_bit_encodings:
+        decodings[i] += decodings[i - 3]
